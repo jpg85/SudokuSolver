@@ -216,7 +216,21 @@ static const char* board2[BoardLines] = {
     "| 7 . . | 4 . . | . . . |",
     "| 4 . 5 | . . . | . 9 . |",
     "|-----------------------|" };
-static const char** boardList[] = { board1, board2 };
+static const char* board3[BoardLines] = {
+    "|-----------------------|",
+    "| 8 . . | . . . | . . . |",
+    "| . . 3 | 6 . . | . . . |",
+    "| . 7 . | . 9 . | 2 . . |",
+    "|-------+-------+-------|",
+    "| . 5 . | . . 7 | . . . |",
+    "| . . . | . 4 5 | 7 . . |",
+    "| . . . | 1 . . | . 3 . |",
+    "|-------+-------+-------|",
+    "| . . 1 | . . . | . 6 8 |",
+    "| . . 8 | 5 . . | . 1 . |",
+    "| . 9 . | . . . | 4 . . |",
+    "|-----------------------|" };
+static const char** boardList[] = { board1, board2, board3 };
 
 //Read the board from built-in or console
 void ReadBoard(std::function<void(int, int, int)> const& setValue, int board)

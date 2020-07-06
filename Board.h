@@ -26,15 +26,20 @@ namespace Solver
 		bool SolveKnown();
 		bool IsSolved() const;
 		bool IsValid() const;
-		void SetInitialData();
+		bool SetInitialData();
 
 		CellGuess MakeGuess();
 		void ClearGuess(CellGuess const& guess);
 
 	private:
 		void SetCell(int x, int y, int v);
+		void InitCell(int x, int y, int v);
 		unsigned short GetCellMask(int x, int y) const;
 		Cell FindEmptyCell();
+
+		unsigned short GetRowMask(int y) const;
+		unsigned short GetColMask(int x) const;
+		unsigned short GetBoxMask(int bx, int by) const;
 
 		char m_board[9][9];
 		unsigned short m_rowMask[9];
